@@ -1,0 +1,41 @@
+@import "./day.scss";
+@import "./cloudy_day.scss";
+@import "./cloudy_night.scss";
+@import "./afternoon.scss";
+@import "./night.scss";
+@import "./rain.scss";
+
+$themes: (
+  day: $day,
+  cloudy_day: $cloudy_day,
+  cloudy_night: $cloudy_night,
+  afternoon: $afternoon,
+  night: $night,
+  rain: $rain,
+);
+
+@mixin themify($property, $key) {
+  @each $theme, $color in $themes {
+    &.#{$theme} {
+      #{$property}: map-get($color, $key);
+    }
+  }
+}
+
+@mixin shadow {
+  position: absolute;
+  left: 30rem;
+  top: -25rem;
+  width: 18rem;
+  height: 9rem;
+  border-radius: 50%;
+  box-shadow: -36rem 38rem 7rem darken(#c3e6f9, 10%);
+}
+
+@mixin reset_btn {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  margin: 0;
+  line-height: 1;
+}

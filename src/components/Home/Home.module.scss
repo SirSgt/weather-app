@@ -1,0 +1,44 @@
+@use "../../styles/mixins" as *;
+
+.home {
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  padding: 3.25rem 2.5rem;
+
+  min-height: 100vh;
+  @include themify("background", "background_color_wide");
+  background-size: auto;
+  transition: all 0.2s;
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .container {
+    max-width: 60rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .forecast_container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 100em) {
+  .home {
+    @include themify("background", "background_color");
+  }
+}
+
+@media (max-width: 47em) {
+  .home {
+    @include themify("background", "background_color_small");
+  }
+}

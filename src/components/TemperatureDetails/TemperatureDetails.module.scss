@@ -1,0 +1,49 @@
+@use "../../styles/mixins" as *;
+
+.details_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .weather_details {
+    padding: 10px;
+
+    .weather_detail {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 10px 0;
+      font-size: 1rem;
+
+      .weather_details_icon {
+        @include themify("color", "text_color");
+      }
+
+      p {
+        @include themify("color", "text_color");
+        font-weight: 500;
+      }
+
+      span {
+        @include themify("color", "text_color");
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 47em) {
+  .details_container {
+    .weather_details {
+      .weather_detail {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  .details_container {
+    display: flex;
+    flex-direction: column;
+  }
+}

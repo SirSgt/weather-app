@@ -1,0 +1,27 @@
+$day: (
+  background_color: (
+    url(../assets/backgrounds/Clouds-200s.svg) repeat,
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
+  ),
+  background_color_small: (
+    url(../assets/backgrounds/Clouds-200s.svg) repeat,
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
+  ),
+  background_color_wide: (
+    url(../assets/backgrounds/clouds_bg.svg) repeat,
+
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
+  ),
+  searchbar_color: #a0d5f9,
+
+  weather_box_color: linear-gradient(-70deg, #c3e6f9, #5bb7f4),
+  forecast_box_color: rgba(#aedefe, 0.7),
+  text_color: #f6f8fb,
+  title_color: #f6f8fb,
+  forecast_title_color: #5a7cb3,
+  forecast_text_color: #4e71a9,
+
+  btn_color: #fff,
+  btn_hover: rgba(226, 240, 251, 1),
+  btn_text: #000,
+);

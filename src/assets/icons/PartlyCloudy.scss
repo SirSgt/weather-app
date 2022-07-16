@@ -1,0 +1,30 @@
+@use "../../styles/mixins" as *;
+
+.container {
+  // position: relative;
+
+  .cloud {
+    position: absolute;
+    top: 30%;
+    left: -90%;
+    z-index: 1;
+  }
+
+  .icon__shadow {
+    @include shadow;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.float {
+  animation: float 3s linear infinite;
+}
